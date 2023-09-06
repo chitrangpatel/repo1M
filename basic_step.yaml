@@ -1,0 +1,9 @@
+apiVersion: tekton.dev/v1
+kind: Step
+metadata:
+  name: myStep
+spec:
+  image: alpine
+  script: |
+    echo hi
+
