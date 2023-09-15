@@ -1,7 +1,7 @@
-apiVersion: tekton.dev/v1
-kind: Step
+apiVersion: tekton.dev/v1alpha1
+kind: StepAction
 metadata:
-  name: myStep
+  name: StepAction
 spec:
   image: alpine
   script: |
