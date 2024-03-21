@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1alpha1
+kind: StepAction
+metadata:
+  name: step-action
+spec:
+  params:
+    - name: path
+  image: ubuntu
+  workingDir: $(params.path)
+  env:
+    - name: PATH
+      value: $(params.path)
+  script: |
+    ls ${PATH}
