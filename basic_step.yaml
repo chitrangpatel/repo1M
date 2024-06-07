@@ -4,6 +4,10 @@ metadata:
   name: StepAction
 spec:
   image: alpine
+  env:
+    - name: PROVIDER_ID
+      value: $(params.provider.provider_id)
   script: |
     echo hi
+    echo ${PROVIDER_ID}
 
